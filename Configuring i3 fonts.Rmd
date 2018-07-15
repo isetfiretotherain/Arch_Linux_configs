@@ -14,7 +14,7 @@ Open the directory where the font is located, and them move all of them using th
 $ mv *.ttf ~/.fonts/
 ```
 
-### Chaging the font
+### Changing the font
 Go to the the i3 config folder and open the config file
 
 ```
@@ -22,7 +22,7 @@ $ cd & cd ~/.config/i3 && vim config
 ```
 
 Change the font name on `font pago:monospace 8` to the desired font by changing `monospace` with the name of the font, as well as the size.
-Save the config file and restart i3. GTK applications will not change.
+Save the config file and restart i3. GTK applications will not change, though.
 
 ### Changing the GTK fonts
 Install the `lxappearance` on ubuntu based distros with:
