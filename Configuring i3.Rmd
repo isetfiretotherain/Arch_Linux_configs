@@ -1,0 +1,39 @@
+# Configuring fonts in i3
+
+This is a brief written guide based on [Code Cast video "i3wm: how to rice"](https://www.youtube.com/watch?v=ARKIwOlazKI) published in 2015. 
+
+***
+
+## System fonts
+Will affect fonts on window titles and gtk applications like Firefox.
+
+### Installing new fonts
+Open the directory where the font is located, and them move all of them using the command:
+
+```
+$ mv *.ttf ~/.fonts/
+```
+
+### Chaging the font
+Go to the the i3 config folder and open the config file
+
+```
+$ cd & cd ~/.config/i3 && vim config
+```
+
+Change the font name on `font pago:monospace 8` to the desired font by changing `monospace` with the name of the font, as well as the size.
+Save the config file and restart i3. GTK applications will not change.
+
+### Changing the GTK fonts
+Install the `lxappearance` on ubuntu based distros with:
+
+```
+$ sudo apt-get install lxappearance
+```
+The pick a font register will not detect the font. The walkaround is to go the configuration files by first changing the size of the font to generate the config file for GTK. The file created is called `.gtkrc-2.0`. There you can create change the fonts manually.
+
+```
+$ vim .gtkrc-2.0
+```
+This is just one of the configuration files generated. Another one is located in `cd ~/.config/gtk-3.0/settings.ini`. Then if you restart `lxappearance` the desired font will be listed normally.
+
